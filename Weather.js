@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-function getWeatherHandler(req, res) {
+function getWeatherData(req, res) {
   let lat = req.query.lat;
   let lon = req.query.lon;
   let key = process.env.WEATHERKEY;
@@ -26,4 +26,4 @@ class Forecast {
   }
 }
 
-module.exports = getWeatherHandler;
+module.exports = getWeatherData;

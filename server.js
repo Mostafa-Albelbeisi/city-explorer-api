@@ -18,17 +18,14 @@ server.get('/test', (req, res) => {
     res.send("Hello, You are now in test route");
 })
 
-// http:localhost:3001/weatherData/
-let getWeatherHandler = require("./Weather.js");
-server.get('/weatherData', getWeatherHandler);
+// http:localhost:3001/weather/
+let getWeatherData  = require("./Weather.js");
+server.get('/weather', getWeatherData );
 
 
 server.get('*', (req, res) => {
     res.send("404")
 })
-
-
-
 
 server.listen(PORT, () =>{
     console.log(`I'm listening on port ${PORT}`);
